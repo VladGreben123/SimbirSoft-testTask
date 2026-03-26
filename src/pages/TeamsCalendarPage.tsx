@@ -1,5 +1,5 @@
 function TeamsCalendarPage() {
-    return <div>Календарь команды</div>
+  return <div>Календарь команды</div>
 }
 
 export default TeamsCalendarPage

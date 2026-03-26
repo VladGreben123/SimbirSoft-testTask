@@ -1,5 +1,5 @@
 function LeaguesPage() {
-    return <div>Лиги</div>
+  return <div>Лиги</div>
 }
 
 export default LeaguesPage

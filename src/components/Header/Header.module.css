@@ -1,0 +1,42 @@
+.header {
+  background: #ffffff;
+  border-bottom: 2px solid #1565c0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 900;
+  color: #1565c0;
+  letter-spacing: -1px;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+}
+
+.link {
+  text-decoration: none;
+  color: #333333;
+  font-size: 15px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.active {
+  color: #1565c0;
+  border-bottom: 2px solid #1565c0;
+}
