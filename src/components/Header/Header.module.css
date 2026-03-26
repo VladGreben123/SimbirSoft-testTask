@@ -40,3 +40,14 @@
   color: #1565c0;
   border-bottom: 2px solid #1565c0;
 }
+
+@media (max-width: 390px) {
+  .inner {
+    padding: 0 16px;
+    gap: 16px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+}

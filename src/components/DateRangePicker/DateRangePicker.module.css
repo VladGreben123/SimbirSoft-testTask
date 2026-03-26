@@ -25,3 +25,13 @@
 .input:focus {
   border-color: #1565c0;
 }
+
+@media (max-width: 390px) {
+  .wrapper {
+    flex-wrap: wrap;
+  }
+
+  .input {
+    width: 120px;
+  }
+}

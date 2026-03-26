@@ -1,0 +1,30 @@
+.page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.table {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.message {
+  text-align: center;
+  color: #888888;
+  padding: 32px;
+}
+
+.error {
+  text-align: center;
+  color: #e53935;
+  margin-top: 48px;
+}
+
+@media (max-width: 390px) {
+  .page {
+    padding: 16px;
+  }
+}

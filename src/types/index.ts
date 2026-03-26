@@ -26,9 +26,9 @@ export interface TeamsResponse {
 }
 
 export interface Score {
-  fullTime: { home: number | null; away: number | null }
-  extraTime: { home: number | null; away: number | null }
-  penalties: { home: number | null; away: number | null }
+  fullTime: { home: number | null; away: number | null } | null
+  extraTime: { home: number | null; away: number | null } | null
+  penalties: { home: number | null; away: number | null } | null
 }
 
 export interface Match {
