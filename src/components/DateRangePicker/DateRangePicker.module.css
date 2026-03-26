@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.label {
+  font-size: 14px;
+  color: #333333;
+  white-space: nowrap;
+}
+
+.input {
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333333;
+  outline: none;
+  width: 140px;
+}
+
+.input:focus {
+  border-color: #1565c0;
+}

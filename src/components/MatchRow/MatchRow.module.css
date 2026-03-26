@@ -1,0 +1,36 @@
+.row {
+  display: grid;
+  grid-template-columns: 110px 60px 120px 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #eeeeee;
+  background: #ffffff;
+  font-size: 14px;
+  color: #333333;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.date {
+  color: #333333;
+}
+
+.time {
+  color: #333333;
+}
+
+.status {
+  color: #555555;
+}
+
+.teams {
+  color: #333333;
+}
+
+.score {
+  color: #333333;
+  white-space: nowrap;
+}
