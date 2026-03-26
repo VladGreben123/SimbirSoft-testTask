@@ -1,4 +1,20 @@
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
+import LeaguesPage from "./pages/LeaguesPage"
+import LeaguesCalendarPage from "./pages/LeagueCalendarPage"
+import TeamsPage from "./pages/TeamsPage"
+import TeamsCalendarPage from "./pages/TeamsCalendarPage"
+
 function App() {
-  return <div>SoccerStat</div>
+  return(
+    <BrowserRouter basename="/soccerstat">
+      <Routes>
+        <Route path="/" element={<Navigate to="/leagues" replace />} />
+        <Route path="/leagues" element={<LeaguesPage/>} />
+        <Route path="/leagues/:id" element={<LeaguesCalendarPage/>} />
+        <Route path="/teams" element={<TeamsPage/>} />
+        <Route path="/teams/:id" element={<TeamsCalendarPage/>} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 export default App
