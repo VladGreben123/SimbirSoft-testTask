@@ -32,7 +32,7 @@ function LeagueCalendarPage() {
         setMatches(data.matches)
         if (data.matches[0]) setLeagueName(data.matches[0].competition.name)
       })
-      .catch(() => setError('Не удалось загрузить данные. Попробуйте позже.'))
+      .catch((e: Error) => setError(e.message))
       .finally(() => setLoading(false))
   }, [id, dateFrom, dateTo])
 

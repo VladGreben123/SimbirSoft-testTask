@@ -19,7 +19,7 @@ function LeaguesPage() {
   useEffect(() => {
     getCompetitions()
       .then((data) => setCompetitions(data.competitions))
-      .catch(() => setError('Не удалось загрузить данные. Попробуйте позже'))
+      .catch((e: Error) => setError(e.message))
       .finally(() => setLoading(false))
   }, [])
 

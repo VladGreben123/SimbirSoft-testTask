@@ -19,7 +19,7 @@ function TeamsPage() {
   useEffect(() => {
     getTeams()
       .then((data) => setTeams(data.teams))
-      .catch(() => setError('Не удалось загрузить данные. Попробуйте позже.'))
+      .catch((e: Error) => setError(e.message))
       .finally(() => setLoading(false))
   }, [])
 
