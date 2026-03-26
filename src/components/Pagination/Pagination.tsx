@@ -16,12 +16,12 @@ function Pagination({ current, total, pageSize, onChange }: Props) {
     const pages: (number | '...')[] = []
 
     if (totalPages <= 7) {
-      for (let i = 0; i <= totalPages; i++) pages.push(i)
+      for (let i = 1; i <= totalPages; i++) pages.push(i)
       return pages
     }
 
     pages.push(1)
-    if (current < 3) pages.push('...')
+    if (current > 3) pages.push('...')
     for (let i = Math.max(2, current - 1); i <= Math.min(totalPages - 1, current + 1); i++) {
       pages.push(i)
     }
@@ -32,7 +32,7 @@ function Pagination({ current, total, pageSize, onChange }: Props) {
   }
 
   return (
-    <div className={styles.Pagination}>
+    <div className={styles.pagination}>
       <button
         className={styles.arrow}
         onClick={() => onChange(current - 1)}

@@ -10,8 +10,8 @@ function MatchRow({ match }: Props) {
   return (
     <div className={styles.row}>
       <span className={styles.date}>{formatDate(match.utcDate)}</span>
-      <span className={styles.date}>{formatTime(match.utcDate)}</span>
-      <span className={styles.date}>{translateStatus(match.utcDate)}</span>
+      <span className={styles.time}>{formatTime(match.utcDate)}</span>
+      <span className={styles.status}>{translateStatus(match.status)}</span>
       <span className={styles.teams}>
         {match.homeTeam.name} - {match.awayTeam.name}
       </span>

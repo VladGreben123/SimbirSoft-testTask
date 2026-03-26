@@ -11,7 +11,7 @@ interface Props {
 
 function DateRangePicker({ dateFrom, dateTo, onDateFromChange, onDateToChange }: Props) {
   return (
-    <div className={styles.label}>
+    <div className={styles.wrapper}>
       <span className={styles.label}>Матчи с</span>
       <ReactDatePicker
         selected={dateFrom}
