@@ -14,7 +14,7 @@ export function translateStatus(status: string): string {
     SCHEDULED: 'Запланирован',
     LIVE: 'В прямом эфире',
     IN_PLAY: 'В игре',
-    PAUSE: 'Пауза',
+    PAUSED: 'Пауза',
     FINISHED: 'Завершён',
     POSTPONED: 'Отложен',
     SUSPENDED: 'Приостановлен',
@@ -31,7 +31,7 @@ export function formatScore(score: Score): string {
   let result = `${fullTime.home}:${fullTime.away}`
 
   if (extraTime.home !== null && extraTime.away !== null) {
-    result += `(${extraTime.home}:${extraTime.away})`
+    result += ` (${extraTime.home}:${extraTime.away})`
   }
 
   if (penalties.home !== null && penalties.away !== null) {
