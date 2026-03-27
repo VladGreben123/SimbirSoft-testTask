@@ -68,3 +68,15 @@
 .clear:hover {
   background: rgba(0, 0, 0, 0.1);
 }
+
+@media (max-width: 820px) {
+  .input {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 390px) {
+  .input {
+    font-size: 14px;
+  }
+}

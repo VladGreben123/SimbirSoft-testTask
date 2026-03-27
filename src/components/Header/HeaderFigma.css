@@ -1,0 +1,74 @@
+/* Header */
+
+position: absolute;
+width: 1440px;
+height: 103px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+
+
+/* Line 1 */
+
+position: absolute;
+width: 109.99px;
+height: 1.05px;
+left: 368px;
+top: 99.45px;
+
+border: 5px solid #116ACC;
+transform: rotate(179.45deg);
+
+
+/* Лиги */
+
+position: absolute;
+width: 59px;
+height: 30px;
+left: 243px;
+top: 51px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 300;
+font-size: 25px;
+line-height: 30px;
+display: flex;
+align-items: center;
+text-align: right;
+
+color: #000000;
+
+
+
+/* Команды */
+
+position: absolute;
+width: 110px;
+height: 30px;
+left: 368px;
+top: 51px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 300;
+font-size: 25px;
+line-height: 30px;
+display: flex;
+align-items: center;
+text-align: right;
+
+color: #000000;
+
+
+
+/* Frame 1605 */
+
+position: absolute;
+width: 188px;
+height: 77px;
+left: 31px;
+top: 21px;
+
+background: url(pngwing.com.png);

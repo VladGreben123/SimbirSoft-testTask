@@ -62,3 +62,32 @@
   height: 40px;
   width: 40px;
 }
+
+@media (max-width: 390px) {
+  .page {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .active {
+    width: 32px;
+    height: 32px;
+  }
+
+  .arrow {
+    width: 32px;
+    height: 32px;
+    margin: 0 2px;
+  }
+
+  .dots {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .pagination {
+    margin-top: 24px;
+  }
+}
