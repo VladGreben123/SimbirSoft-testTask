@@ -53,7 +53,13 @@ function Pagination({ current, total, pageSize, onChange }: Props) {
         aria-label="Предыдущая страница"
       >
         <svg width="5" height="9" viewBox="0 0 5 9" fill="none">
-          <path d="M4 1L1 4.5L4 8" stroke="#9CA3AF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          <path
+            d="M4 1L1 4.5L4 8"
+            stroke="#9CA3AF"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       </button>
 
@@ -80,7 +86,13 @@ function Pagination({ current, total, pageSize, onChange }: Props) {
         aria-label="Следующая страница"
       >
         <svg width="5" height="9" viewBox="0 0 5 9" fill="none">
-          <path d="M1 1L4 4.5L1 8" stroke="#9CA3AF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          <path
+            d="M1 1L4 4.5L1 8"
+            stroke="#9CA3AF"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       </button>
     </div>
