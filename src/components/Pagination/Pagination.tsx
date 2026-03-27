@@ -1,4 +1,6 @@
 import { getPages } from '../../utils'
+import arrowLeft from '../../assets/icons/ArrowLeft.svg'
+import arrowRight from '../../assets/icons/ArrowRight.svg'
 import styles from './Pagination.module.css'
 
 interface Props {
@@ -21,15 +23,7 @@ function Pagination({ current, total, pageSize, onChange }: Props) {
         disabled={current === 1}
         aria-label="Предыдущая страница"
       >
-        <svg width="5" height="9" viewBox="0 0 5 9" fill="none">
-          <path
-            d="M4 1L1 4.5L4 8"
-            stroke="#9CA3AF"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+        <img src={arrowLeft} alt="" />
       </button>
 
       {getPages(current, totalPages).map((page, index) =>
@@ -54,15 +48,7 @@ function Pagination({ current, total, pageSize, onChange }: Props) {
         disabled={current === totalPages}
         aria-label="Следующая страница"
       >
-        <svg width="5" height="9" viewBox="0 0 5 9" fill="none">
-          <path
-            d="M1 1L4 4.5L1 8"
-            stroke="#9CA3AF"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+        <img src={arrowRight} alt="" />
       </button>
     </div>
   )
