@@ -4,7 +4,7 @@ import { getCompetitions } from '../api'
 import type { Competition } from '../types'
 import SearchInput from '../components/SearchInput/SearchInput'
 import Pagination from '../components/Pagination/Pagination'
-import styles from './LeaguesPage.module.css'
+import styles from './CardPage.module.css'
 
 const PAGE_SIZE = 16
 
@@ -45,7 +45,7 @@ function LeaguesPage() {
                 className={styles.card}
                 onClick={() => navigate(`/leagues/${competition.id}`)}
               >
-                <img src={competition.emblem} alt={competition.name} className={styles.emblem} />
+                <img src={competition.emblem} alt={competition.name} className={styles.image} />
                 <p className={styles.name}>{competition.name}</p>
                 <p className={styles.area}>{competition.area.name}</p>
               </div>

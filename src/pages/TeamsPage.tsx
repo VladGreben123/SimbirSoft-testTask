@@ -4,7 +4,7 @@ import { getTeams } from '../api'
 import type { Team } from '../types'
 import SearchInput from '../components/SearchInput/SearchInput'
 import Pagination from '../components/Pagination/Pagination'
-import styles from './TeamsPage.module.css'
+import styles from './CardPage.module.css'
 
 const PAGE_SIZE = 16
 
@@ -48,7 +48,7 @@ function TeamsPage() {
                 className={styles.card}
                 onClick={() => navigate(`/teams/${team.id}`)}
               >
-                <img src={team.crest} alt={team.name} className={styles.crest} />
+                <img src={team.crest} alt={team.name} className={styles.image} />
                 <p className={styles.name}>{team.name}</p>
               </div>
             ))}
