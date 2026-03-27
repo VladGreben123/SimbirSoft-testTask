@@ -1,3 +1,4 @@
+import { getPages } from '../../utils'
 import styles from './Pagination.module.css'
 
 interface Props {
@@ -11,38 +12,6 @@ function Pagination({ current, total, pageSize, onChange }: Props) {
   const totalPages = Math.ceil(total / pageSize)
 
   if (totalPages <= 1) return null
-
-  const getPages = () => {
-    const pages: (number | '...')[] = []
-
-    if (totalPages <= 7) {
-      for (let i = 1; i <= totalPages; i++) pages.push(i)
-      return pages
-    }
-
-    const hasLeftDots = current > 4
-    const hasRightDots = current < totalPages - 2
-
-    if (hasLeftDots && hasRightDots) {
-      pages.push('...')
-      for (let i = current - 2; i <= current + 2; i++) {
-        pages.push(i)
-      }
-      pages.push('...')
-    } else if (!hasLeftDots) {
-      for (let i = 1; i <= 6; i++) {
-        pages.push(i)
-      }
-      pages.push('...')
-    } else {
-      pages.push('...')
-      for (let i = totalPages - 5; i <= totalPages; i++) {
-        pages.push(i)
-      }
-    }
-
-    return pages
-  }
 
   return (
     <div className={styles.pagination}>
@@ -63,7 +32,7 @@ function Pagination({ current, total, pageSize, onChange }: Props) {
         </svg>
       </button>
 
-      {getPages().map((page, index) =>
+      {getPages(current, totalPages).map((page, index) =>
         page === '...' ? (
           <span key={`dots-${index}`} className={styles.dots}>
             ...

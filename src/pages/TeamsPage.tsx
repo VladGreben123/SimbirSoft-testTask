@@ -23,7 +23,8 @@ function TeamsPage() {
       .finally(() => setLoading(false))
   }, [])
 
-  const filtered = teams.filter((t) => t.name.toLowerCase().includes(search.toLowerCase()))
+  const query = search.toLowerCase()
+  const filtered = teams.filter((t) => t.name.toLowerCase().includes(query))
 
   const paginated = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
 

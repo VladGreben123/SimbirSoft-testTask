@@ -23,7 +23,8 @@ function LeaguesPage() {
       .finally(() => setLoading(false))
   }, [])
 
-  const filtered = competitions.filter((c) => c.name.toLowerCase().includes(search.toLowerCase()))
+  const query = search.toLowerCase()
+  const filtered = competitions.filter((c) => c.name.toLowerCase().includes(query))
 
   const paginated = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
 
