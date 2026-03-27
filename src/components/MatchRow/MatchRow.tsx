@@ -9,11 +9,13 @@ interface Props {
 function MatchRow({ match }: Props) {
   return (
     <div className={styles.row}>
-      <span className={styles.date}>{formatDate(match.utcDate)}</span>
-      <span className={styles.time}>{formatTime(match.utcDate)}</span>
+      <div className={styles.datetime}>
+        <span className={styles.date}>{formatDate(match.utcDate)}</span>
+        <span className={styles.time}>{formatTime(match.utcDate)}</span>
+      </div>
       <span className={styles.status}>{translateStatus(match.status)}</span>
       <span className={styles.teams}>
-        {match.homeTeam.name} - {match.awayTeam.name}
+        {match.homeTeam.name} — {match.awayTeam.name}
       </span>
       <span className={styles.score}>{formatScore(match.score)}</span>
     </div>

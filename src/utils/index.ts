@@ -12,13 +12,14 @@ export function formatTime(utcDate: string): string {
 export function translateStatus(status: string): string {
   const map: Record<string, string> = {
     SCHEDULED: 'Запланирован',
+    TIMED: 'Запланирован',
     LIVE: 'В прямом эфире',
     IN_PLAY: 'В игре',
     PAUSED: 'Пауза',
     FINISHED: 'Завершён',
     POSTPONED: 'Отложен',
     SUSPENDED: 'Приостановлен',
-    CANCELLED: 'Отменён',
+    CANCELED: 'Отменён',
   }
   return map[status] ?? status
 }
