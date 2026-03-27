@@ -2,40 +2,63 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4px;
-  margin-top: 24px;
+  gap: 1px;
+  margin-top: 40px;
 }
 
-.page,
-.arrow {
-  min-width: 32px;
-  height: 32px;
-  padding: 0 6px;
+.page {
+  padding: 0;
   border: none;
   background: transparent;
-  border-radius: 50%;
-  font-size: 14px;
-  color: #333333;
+  border-radius: 7px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #9CA3AF;
   cursor: pointer;
-}
-
-.page:hover,
-.arrow:hover:not(:disabled) {
-  background: #f0f2f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
 }
 
 .active {
-  background: #1565c0 !important;
-  color: #ffffff;
+  background: #116ACC !important;
+  color: #ffffff !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 7px;
+}
+
+.arrow {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 7px;
+  margin: 0 4px;
 }
 
 .arrow:disabled {
-  color: #cccccc;
+  opacity: 0.3;
   cursor: default;
 }
 
 .dots {
-  font-size: 14px;
-  color: #888888;
-  padding: 0 4px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #9CA3AF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
 }

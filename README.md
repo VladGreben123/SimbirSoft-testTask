@@ -1,75 +1,85 @@
-# React + TypeScript + Vite
+# SoccerStat
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Приложение для просмотра футбольной статистики — список лиг, команды внутри лиги, календарь матчей.
 
-Currently, two official plugins are available:
+Тестовое задание SimbirSoft (поток Frontend).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Демо:** https://mesey.github.io/SimbirSoft-testTask/
 
-## React Compiler
+---
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Стек
 
-Note: This will impact Vite dev & build performances.
+- React 19 + TypeScript
+- Vite 8
+- React Router DOM v6 (HashRouter)
+- Axios
+- react-datepicker + date-fns
+- CSS Modules
+- ESLint + Prettier
+- Деплой: gh-pages
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Функциональность
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Список доступных лиг (соревнований) с поиском и пагинацией
+- Список команд внутри лиги с поиском и пагинацией
+- Календарь матчей лиги с фильтрацией по диапазону дат
+- Календарь матчей команды с фильтрацией по диапазону дат
+- Адаптивная вёрстка (мобильные устройства от 390px, планшеты от 820px)
+- Обработка ошибок API: 429 (лимит запросов), 403 (нет доступа), сетевые ошибки
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Запуск локально
+
+### 1. Клонировать репозиторий
+
+```bash
+git clone https://github.com/mesey/SimbirSoft-testTask.git
+cd SimbirSoft-testTask/soccerstat
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Получить токен API
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Зарегистрироваться на [football-data.org](https://www.football-data.org/) и получить бесплатный API-токен.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 3. Создать файл `.env`
+
 ```
+VITE_API_TOKEN=ваш_токен_здесь
+VITE_API_BASE_URL=https://api.football-data.org
+```
+
+### 4. Установить зависимости и запустить
+
+```bash
+npm install
+npm run dev
+```
+
+Приложение откроется на `http://localhost:5173`.
+
+---
+
+## Сборка и деплой
+
+```bash
+# Сборка в папку dist/
+npm run build
+
+# Деплой на GitHub Pages
+npm run deploy
+```
+
+> В режиме разработки запросы к API проксируются через Vite (`/api → https://api.football-data.org`).
+> В продакшене используется прямой URL из `.env.production`.
+
+---
+
+## Ограничения бесплатного тарифа API
+
+- Доступны только 13 лиг
+- Эндпоинт `/competitions` блокируется CORS в некоторых браузерах (например, Opera GX) — рекомендуется Chrome
+- Лимит запросов: 10 в минуту (при превышении отображается ошибка 429)

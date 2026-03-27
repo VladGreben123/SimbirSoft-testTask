@@ -1,55 +1,61 @@
 .page {
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 26px 110px 60px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(4, 285px);
+  gap: 28px;
+  justify-content: center;
+  margin-top: 26px;
 }
 
 .card {
+  width: 285px;
+  height: 298px;
   background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-  padding: 24px 16px 16px;
+  border-radius: 7px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 22px;
   cursor: pointer;
-  transition: box-shadow 0.2s;
-}
-
-.card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: relative;
 }
 
 .emblem {
-  width: 80px;
-  height: 80px;
+  position: absolute;
+  top: 16px;
+  width: 192px;
+  height: 192px;
   object-fit: contain;
-  margin-bottom: 12px;
 }
 
 .name {
-  font-size: 14px;
-  font-weight: 500;
-  color: #333333;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
   text-align: center;
   margin-bottom: 4px;
 }
 
 .area {
-  font-size: 12px;
-  color: #888888;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
   text-align: center;
 }
 
 .message {
   text-align: center;
-  color: #888888;
+  color: #9CA3AF;
   margin-top: 48px;
 }
 
@@ -59,13 +65,30 @@
   margin-top: 48px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 820px) {
+  .page {
+    padding: 20px 24px 40px;
+  }
+
   .grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+    padding: 16px;
+    padding-top: 200px;
+  }
+
+  .emblem {
+    width: 160px;
+    height: 160px;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 390px) {
   .grid {
     grid-template-columns: repeat(1, 1fr);
   }

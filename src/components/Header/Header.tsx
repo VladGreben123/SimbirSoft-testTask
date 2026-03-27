@@ -1,11 +1,12 @@
 import { NavLink } from 'react-router-dom'
+import logo from '../../assets/pngwing.com.png'
 import styles from './Header.module.css'
 
 function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
-        <span className={styles.logo}>FIFA</span>
+        <img src={logo} alt="FIFA" className={styles.logo} />
         <nav className={styles.nav}>
           <NavLink
             to="/leagues"

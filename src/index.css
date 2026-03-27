@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Ubuntu:wght@700&family=Montserrat:wght@500&family=Work+Sans:wght@600&display=swap');
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -5,11 +7,14 @@
 }
 
 :root {
-  /* сюда потом добавишь цвета, шрифты из Фигмы */
-  /* --color-primary: #...; */
-  /* --font-size-base: 16px; */
+  --color-primary: #116ACC;
+  --color-bg: #EFF0F1;
+  --color-white: #FFFFFF;
+  --color-text: #000000;
+  --color-gray: #9CA3AF;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Inter', sans-serif;
+  background: var(--color-bg);
 }
