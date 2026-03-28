@@ -1,10 +1,14 @@
 import axios from 'axios'
 
+const headers: Record<string, string> = {}
+
+if (import.meta.env.VITE_API_TOKEN) {
+  headers['X-Auth-Token'] = import.meta.env.VITE_API_TOKEN
+}
+
 const client = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL,
-  headers: {
-    'X-Auth-Token': import.meta.env.VITE_API_TOKEN,
-  },
+  headers,
 })
 
 client.interceptors.response.use(
