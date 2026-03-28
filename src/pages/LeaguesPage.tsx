@@ -37,6 +37,9 @@ function LeaguesPage() {
     <main className={styles.page}>
       <SearchInput value={search} onChange={handleSearch} />
 
+      {loading && <p className={styles.message}>Загрузка...</p>}
+      {error && <p className={styles.error}>{error}</p>}
+
       {!loading && !error && (
         <>
           <div className={styles.grid}>
